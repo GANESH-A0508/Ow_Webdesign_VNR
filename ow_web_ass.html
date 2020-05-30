@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment For OW-we Design-VNR
+        </title>
+        <style>
+      
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*
+@import url('https://fonts.googleapis.com/css?family=Numans');
+*/
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+i {
+	margin-right: 10px;
+}
+/*----------multi-level-accordian-menu------------*/
+.navbar-logo{
+	padding: 15px;
+	color: #fff;
+}
+.navbar-mainbg{
+	background-color: #5161ce;
+	padding: 0px;
+}
+#navbarSupportedContent{
+	overflow: hidden;
+	position: relative;
+}
+#navbarSupportedContent ul{
+	padding: 0px;
+	margin: 0px;
+}
+#navbarSupportedContent ul li a i{
+	margin-right: 10px;
+}
+#navbarSupportedContent li {
+	list-style-type: none;
+	float: left;
+}
+#navbarSupportedContent ul li a{
+	color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+#navbarSupportedContent>ul>li.active>a{
+	color: #5161ce;
+	background-color: transparent;
+	transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after {
+	content: "\f105";
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+	font-weight: 900;
+	transition: 0.5s;
+}
+#navbarSupportedContent .active>a:not(:only-child):after {
+	transform: rotate(90deg);
+}
+.hori-selector{
+	display:inline-block;
+	position:absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background-color: #fff;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-top: 10px;
+}
+.hori-selector .right,
+.hori-selector .left{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	bottom: 10px;
+}
+.hori-selector .right{
+	right: -25px;
+}
+.hori-selector .left{
+	left: -25px;
+}
+.hori-selector .right:before,
+.hori-selector .left:before{
+	content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #5161ce;
+}
+.hori-selector .right:before{
+	bottom: 0;
+    right: -25px;
+}
+.hori-selector .left:before{
+	bottom: 0;
+    left: -25px;
+}
+
+
+
+
+@media (max-width: 991px){
+	#navbarSupportedContent ul li a{
+		padding: 12px 30px;
+	}
+	.hori-selector{
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left,
+	.hori-selector .right{
+		right: 10px;
+	}
+	.hori-selector .left{
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right{
+		bottom: -25px;
+	}
+	.hori-selector .left:before{
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before{
+		bottom: -25px;
+		left: -25px;
+	}
+}
+
+img{
+    border-radius: 50%;
+}
+h2 u{
+    color: lightseagreen;
+}
+table tr:nth-child(odd){
+    background-color: lightseagreen;
+}
+
+            
+            
+            
+            
+        </style>
+        
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    
+        
+        
+        
+        
+        
+        
+        
+    </head>
+    <body>
+<nav class="navbar navbar-expand-lg navbar-mainbg">
+    
+
+        <a class="navbar-brand navbar-logo" href="#" style="float:left">
+            
+            Resume  <br>
+        
+  <span style="color:yellow"> Ganesh</span>
+        
+        </a>
+      
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white">
+            =
+        </i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+<body>
+    <center><strong><U>Resume</U></strong><br><br>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfo7YrVOAraLO0YXyeWPr3oPLXiy3JzCPI7dYH-bk6J6blZHqQ&usqp=CAU" width="150" height="150">
+        
+        
+        
+        
+        
+        </center>
+    <div align="right">
+        <h4>Email: ganeshdurgam143@gmail.com</h4>
+        <h4> Github:<a href="https://github.com/GANESH-A0508/Register-And-Login/" target="_blank">click me</a></h4>
+        <h4> Contact no:<strong>8367430227</strong></h4>
+    </div>
+    <h2 style="background-color: darkcyan;">Ganesh Durgam</h2>
+    <hr>
+    <h2><u>CAREER OBJECTIVE</u></h2>
+    <p>
+        To make use of my interpersonal skills to achieve goals of a company that focuses on customer satisfaction and
+        customer experience.
+        <p>
+            <hr>
+            <h2><u>ABOUT MYSELF</u></h2>
+            <audio controls>
+                <source src="./horse.mp3" type="audio/mp3">
+            </audio>
+            <h2>
+                <u>ACADEMIC QUALIFICATION</u>
+            </h2>
+            <table border=1 width="500" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Qualification</th>
+                    <th>Board/University</th>
+                    <th>School/College</th>
+                    <th>Percentage/CGPA</th>
+                </tr>
+                <tr>
+                    <td>
+                        Btech
+                    </td>
+                    <td>JNTUH</td>
+                    <td>
+                        VNR Vignana Jyothi Institute of Technology
+                    </td>
+                    <td>FAIL</td>
+                </tr>
+                <tr>
+                    <td>Diploma</td>
+                    <td>SBTET</td>
+                    <td>Govt Polytechnic College Nalgonda</td>
+                    <td>87%</td>
+                </tr>
+                <tr>
+                    <td>10TH</td>
+                    <td>SSC</td>
+                    <td>ZPHS Nagawaram</td>
+                    <td>8.3</td>
+                </tr>
+
+            </table>
+            <hr>
+            <h2><u>HOBBIES</u></h2>
+            <ul>
+                <li>playing</li>
+                <li>Reading Books</li>
+                <li>cooking</li>
+            </ul>
+            <hr>
+            <h2><u>SKILLS</u></h2>
+            <UL>
+                <li>C & C++</li>
+                <li>HTML & CSS & Bootstrap & JS </li>
+                <li>JAVA</li>
+                <li>  DBMS & PHP & MYSQL & ORACLE & FIREBASE </li>
+                <li>  .NET & ASP.NET </li>
+                
+                
+                
+                
+            </UL>
+            <hr>
+            <h2><u>Projects</u></h2>
+            <h3>A Website On Vandalism And Anti Social Behaviour Department</h3>
+            <p align="justify">
+                Technology Used: Asp.Net, Microsoft Visual Studio Standard Enterprise 2015, MySQL,
+                Designing A Website For Peoples on Give There Complaint In Online Platform </p>
+            <h3>Technologies used</h3>
+            <small><i>Website Design</i><sub>Wd</sub></small><br>
+            <small><i> MySQL </i></small>
+            <h3><i>Project video</i></h3>
+            <video controls muted height="300" width="500">
+                <source src="./MYvideo.mp4" type="video/mp4">
+            </video>
+            <hr>
+            <h2><u>Certifications</u></h2>
+            <ol>
+                <li>Certificate Form Srujana Tech Fest 2017 district Level</li>
+                <li>Certificate From Srujana Tech Fest 2018 State Level</li>
+                
+            </ol>
+            <hr>
+            <h2><u>DECLARATION</u>
+            </h2>
+            <p>I hereby declare that above-mentioned information is correct to the best of my knowledge and belief.</p>
+
+            <br>
+            <br>
+            <center>
+                <em>
+                    <marquee behavior="alternate" scrollamount="10" >Fell Free to mail me</marquee>
+                </em>
+                <form>
+                    Name: <input type="text" name="name"><br><br>
+                    Email: <input type="email" name="email"><br>
+                    Rate my Resume: <br><input type="radio" name="rate" value="1">1  &nbsp;&nbsp;&nbsp;
+                    
+                    <input type="radio" name="rate" value="2">2  &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="rate" value="3">3  &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="rate" value="4">4  &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="rate" value="5">5  &nbsp;&nbsp;&nbsp;
+                    <br>
+                    
+                    Resume type:
+                    <select>
+                        <option name="creative">Creative</option>
+                        <option name="good">Good</option>
+                        <option name="better">Better</option>
+                        <option name="improve">imporve</option>
+                    </select><br><br>
+                    Message: <br><textarea rows="3" cols="30"></textarea><br>
+
+                    <input type="submit" value="submit" name="submit">
+                </form>
+            </center>
+    
+        
+        
+        
+        <script>
+            
+// ---------Responsive-navbar-active-animation-----------
+function test(){
+  var tabsNewAnim = $('#navbarSupportedContent');
+  var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+  var activeItemNewAnim = tabsNewAnim.find('.active');
+  var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+  var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+  var itemPosNewAnimTop = activeItemNewAnim.position();
+  var itemPosNewAnimLeft = activeItemNewAnim.position();
+  $(".hori-selector").css({
+    "top":itemPosNewAnimTop.top + "px", 
+    "left":itemPosNewAnimLeft.left + "px",
+    "height": activeWidthNewAnimHeight + "px",
+    "width": activeWidthNewAnimWidth + "px"
+  });
+  $("#navbarSupportedContent").on("click","li",function(e){
+    $('#navbarSupportedContent ul li').removeClass("active");
+    $(this).addClass('active');
+    var activeWidthNewAnimHeight = $(this).innerHeight();
+    var activeWidthNewAnimWidth = $(this).innerWidth();
+    var itemPosNewAnimTop = $(this).position();
+    var itemPosNewAnimLeft = $(this).position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+  });
+}
+$(document).ready(function(){
+  setTimeout(function(){ test(); });
+});
+$(window).on('resize', function(){
+  setTimeout(function(){ test(); }, 500);
+});
+$(".navbar-toggler").click(function(){
+  setTimeout(function(){ test(); });
+});
+            
+            
+            
+            
+            
+            
+     </script> 
+        
+        
+    
+
+    </body>
+</html>
